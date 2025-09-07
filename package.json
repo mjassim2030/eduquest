@@ -1,0 +1,27 @@
+{
+  "name": "eduquest",
+  "private": true,
+  "packageManager": "pnpm@10.15.1",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:all": "turbo run dev --parallel",
+    "build:all": "turbo run build",
+    "lint:all": "turbo run lint",
+    "test:all": "turbo run test",
+    "prepare": "husky install",
+    "web:dev": "pnpm --filter web dev",
+    "api:dev": "pnpm --filter api start:dev"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "eslint": "^9.0.0",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.3.0",
+    "turbo": "^1.13.4"
+  }
+}
